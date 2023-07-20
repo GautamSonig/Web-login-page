@@ -1,0 +1,51 @@
+{% load static %}
+{% include 'header.html' %}
+{% include 'banner.html' %}
+	<div id="page">
+		<div class="featured-post">
+		</div>
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="#">Login Here</a></h2>
+				<h3>Login Page</h3>
+            	
+            <font color="orange">{{msg}}</font>
+			<form method="post" action={{curl}}login/>
+			{% csrf_token %}
+			<table>
+				<tr>
+				<td>UserName</td>
+				<td><input type="text" name="username" placeholder="Enter User Name"></td>
+				</tr>                       
+				
+				<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" placeholder="Enter Password"></td>
+				</tr>
+			    <tr>
+					<td><input type="submit" value="Login"/> </td>
+					</tr>                   
+				</table>
+					
+			</div>
+		</div>
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Social Media links</h2>
+					<ul>
+						<li><a href="https://www.linkedin.com/">Linkdin</a></li>
+						<li><a href="https://www.facebook.com/">Facebook</a></li>
+						<li><a href="https://www.twitter.com/">Twitter</a></li>
+						<li><a href="https://www.gmail.com/">Gmail</a></li>
+						<li><a href="https://www.instagram.com/">Instagram</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
